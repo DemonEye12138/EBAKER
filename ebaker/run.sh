@@ -1,0 +1,31 @@
+CUDA_VISIBLE_DEVICES=1 \
+torchrun --nproc_per_node 1 -m  training.main \
+    --train-data '/home/mcx/ret3.csv' \
+    --retrieval-data1 '/home/mcx/RS/Datasets/RSICD/csv/rsicd_test.csv' \
+    --retrieval-data2 '/home/mcx/RS/Datasets/RSITMD/csv/rsitmd_test.csv'\
+    --retrieval-data3 '/home/mcx/RS/Datasets/NWPU-Captions-main/nwpu_test.csv'\
+    --retrieval-frequency 1 \
+    --w_simcse 1.0\
+    --dropratio 0.01\
+    --dropepoch 4\
+    --csv-img-key filename\
+    --retrieval-csv-img-key filename\
+    --retrieval-images-dir /home/mcx/RS/Datasets/RSICD/RSICD_image\
+    --image_dir '/home/mcx/RS/Datasets/RSICD/RSICD_image'\
+    --datasets-dir '/home/mcx/RS/Datasets' \
+    --epochs 7 \
+    --save-frequency 0 \
+    --batch-size 100 \
+    --workers 8 \
+    --lr 1.5e-05 \
+    --warmup 200 \
+    --weight_decay 0.7 \
+    --max-grad-norm 50.0 \
+    --image-model 'ViT-B-32'\
+    --image-model-builder 'openclip' \
+    --text-model 'ViT-B-32' \
+    --text-model-builder 'openclip'\
+    --pretrained-image-model  \
+    --pretrained-text-model \
+    --loss 'InfoNCE' \
+    --report-to tensorboard --logs 'logs/RS5M'  --name 'test'\
