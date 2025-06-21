@@ -2,12 +2,12 @@ import pandas as pd
 import os
 
 # 输入输出路径配置
-input_csv = "/root/autodl-tmp/EBAKER/ebaker/rsitmd_test0.csv"
-output_csv = "/root/autodl-tmp/EBAKER/ebaker/rsitmd_test.csv"
+input_csv = "ebaker/rsitmd_test0.csv"
+output_csv = "ebaker/rsitmd_test.csv"
 
 # 新旧路径前缀映射 (注意保留尾部斜杠)
 old_base = "/home/mcx/RS/Datasets/RSITMD/images/"
-new_base = "/root/autodl-tmp/data/RSITMD/images/"
+new_base = "data/RSITMD/images/"
 
 # 读取CSV文件
 df = pd.read_csv(input_csv)

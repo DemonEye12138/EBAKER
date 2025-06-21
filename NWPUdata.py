@@ -23,7 +23,7 @@ def convert_nwpu_path(old_path: str) -> str:
 
     # 基础路径配置
     old_prefix = "/home/mcx/RS/Datasets/NWPU-RESISC45/"
-    new_prefix = "/root/autodl-tmp/data/NWPU-RESISC45/"
+    new_prefix = "data/NWPU-RESISC45/"
 
     # 验证原始路径格式
     if not old_path.startswith(old_prefix):
@@ -44,8 +44,8 @@ def convert_nwpu_path(old_path: str) -> str:
 
 
 # 输入输出配置
-input_csv = "/root/autodl-tmp/EBAKER/ebaker/nwpu_test0.csv"
-output_csv = "/root/autodl-tmp/EBAKER/ebaker/nwpu_test.csv"
+input_csv = "ebaker/nwpu_test0.csv"
+output_csv = "ebaker/nwpu_test.csv"
 
 # 处理CSV文件
 df = pd.read_csv(input_csv)

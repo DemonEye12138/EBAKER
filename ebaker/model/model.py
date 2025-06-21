@@ -10,7 +10,7 @@ import open_clip
 import cn_clip.clip as cn_clip
 from transformers import AutoConfig, AutoTokenizer, AutoModel, BertForSequenceClassification
 
-import transformers.adapters
+#import adapters     #transformers.adapters
 from sentence_transformers import SentenceTransformer
 
 from training.distributed import is_master

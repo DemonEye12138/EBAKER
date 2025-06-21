@@ -2,24 +2,24 @@ import pandas as pd
 import os
 
 # 输入输出配置
-input_csv = "/root/autodl-tmp/EBAKER/ebaker/ret30.csv"
-output_csv = "/root/autodl-tmp/EBAKER/ebaker/ret3.csv"
+input_csv = "ebaker/ret30.csv"
+output_csv = "ebaker/ret3.csv"
 
 # 转换规则配置（按优先级排序）
 PATH_RULES = [
     {  # RSITMD规则
         "old_prefix": "/home/mcx/RS/Datasets/RSITMD/images/",
-        "new_prefix": "/root/autodl-tmp/data/RSITMD/images/",
+        "new_prefix": "data/RSITMD/images/",
         "type": "direct"
     },
     {  # RSICD规则
         "old_prefix": "/home/mcx/RS/Datasets/RSICD/RSICD_image/",
-        "new_prefix": "/root/autodl-tmp/data/RSICD/RSICD_images/",
+        "new_prefix": "data/RSICD/RSICD_images/",
         "type": "direct"
     },
     {  # NWPU-RESISC45规则（支持多下划线文件名）
         "old_prefix": "/home/mcx/RS/Datasets/NWPU-RESISC45/",
-        "new_prefix": "/root/autodl-tmp/data/NWPU-RESISC45/",
+        "new_prefix": "data/NWPU-RESISC45/",
         "type": "dynamic_class"
     }
 ]
